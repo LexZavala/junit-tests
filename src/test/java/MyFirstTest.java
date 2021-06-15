@@ -10,8 +10,8 @@ public class MyFirstTest {
 
     @Test
     public void testStrings(){
-        assertEquals("Codeup", "CodeUp");
         assertNotEquals("Codeup", "CodeUp");
+        assertEquals("Codeup", "CodeUp");
     }
 
     @Test
@@ -36,8 +36,6 @@ public class MyFirstTest {
     @Test
     public void testTrueOrFalse(){
         String language = "PHP";
-
-
 
         assertTrue(language.contains("H"));// use assertTrue for this statement
         assertFalse(language.contains("J")); // use assertFalse for this statement
