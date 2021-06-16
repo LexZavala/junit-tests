@@ -22,57 +22,42 @@ public class StudentTest {
         assertNotNull(testStudent.getName());
         assertNotNull(testStudent.getId());
         assertEquals(new ArrayList<>(), testStudent.getGrades());
-    }
-
-
-
-    @Test
-    public void testIfStudentCanBeCreated(){
-        Student fer = new Student(1L, "fer");
+        // test a null value
         Student nullStudent = null;
-        assertNotNull(fer);
         assertNull(nullStudent);
     }
 
     @Test
-    public void testIfFieldsAreSet(){
-        Student fer = new Student(1L, "fer");
-        assertEquals(1L, fer.getId());
-        assertEquals("fer", fer.getName());
-
-        Student rosie = new Student(40L, "Rosie");
-        assertEquals(40L, rosie.getId());
-        assertEquals("Rosie", rosie.getName());
+    public void testIfGettersWork(){
+        assertEquals(2100404, testStudent.getId());
+        assertEquals("Lex", testStudent.getName());
     }
 
     @Test
     public void testIfAddGradeWorks(){
-        Student fer = new Student(1L, "fer");
-        assertEquals(0, fer.getGrades().size());
-        fer.addGrade(90);
-        assertEquals(1, fer.getGrades().size());
-        fer.addGrade(70);
-        assertEquals(2, fer.getGrades().size());
+        assertEquals(0, testStudent.getGrades().size());
+        testStudent.addGrade(96);
+        assertEquals(1, testStudent.getGrades().size());
+        testStudent.addGrade(82);
+        assertEquals(2, testStudent.getGrades().size());
     }
 
     @Test
     public void testIfGetGradesWorks(){
-        Student fer = new Student(1L, "fer");
-        fer.addGrade(90);
-        fer.addGrade(70);
-        assertSame(90, fer.getGrades().get(0));
-        assertSame(70, fer.getGrades().get(1));
+        testStudent.addGrade(96);
+        testStudent.addGrade(82);
+        assertSame(96, testStudent.getGrades().get(0));
+        assertSame(82, testStudent.getGrades().get(1));
     }
 
     @Test
     public void testIfGetAVGWorks(){
-        Student fer = new Student(1L, "fer");
-        fer.addGrade(90);
-        fer.addGrade(70); // 160 / 2 = 80
-        assertEquals(80, fer.getGradeAverage(), 0);
-        fer.addGrade(50); // 210 / 3 = 70
-        assertEquals(70, fer.getGradeAverage(), 0);
+        testStudent.addGrade(90);
+        testStudent.addGrade(70); // 160 / 2 = 80
+        assertEquals(80, testStudent.getGradeAverage(), 0);
+        testStudent.addGrade(50); // 210 / 3 = 70
+        assertEquals(70, testStudent.getGradeAverage(), 0);
     }
 
-    }
+}
 
