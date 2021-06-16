@@ -1,23 +1,27 @@
 import org.junit.Before;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class StudentTest {
 
 
-//    private Student testStudent = new Student();
+    private static Student testStudent;
+
 
     @Before
-    public static void setUp(){
-
-
+    public void setUp(){
+    testStudent = new Student(2100404, "Lex" );
     }
 
     @Test
     public void propertiesAreSet() {
-//        assertNotNull("Lex", );
-        assertEquals("Lex", testStudent);
+        assertNotNull(testStudent.getName());
+        assertNotNull(testStudent.getId());
+        assertEquals(new ArrayList<>(), testStudent.getGrades());
     }
 
 
@@ -71,4 +75,4 @@ public class StudentTest {
     }
 
     }
-}
+
