@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 import org.junit.Before;
-=======
->>>>>>> 0f02e99b35dc098ec9732a8207820f163c17de0d
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentTest {
-<<<<<<< HEAD
-    private Student testStude = new Student();
+
+
+//    private Student testStudent = new Student();
 
     @Before
     public static void setUp(){
@@ -16,11 +15,12 @@ public class StudentTest {
     }
 
     @Test
-    public void propertiesAreSet(){
+    public void propertiesAreSet() {
 //        assertNotNull("Lex", );
-        assertEquals("Lex",testStudent);
+        assertEquals("Lex", testStudent);
+    }
 
-=======
+
 
     @Test
     public void testIfStudentCanBeCreated(){
@@ -68,7 +68,7 @@ public class StudentTest {
         assertEquals(80, fer.getGradeAverage(), 0);
         fer.addGrade(50); // 210 / 3 = 70
         assertEquals(70, fer.getGradeAverage(), 0);
->>>>>>> 0f02e99b35dc098ec9732a8207820f163c17de0d
     }
 
+    }
 }
